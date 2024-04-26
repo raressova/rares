@@ -186,26 +186,26 @@ int main()
     int starting_vertex;
     int *adj_matrix;
 
-           printf("cate noduri are graful?");
-           scanf("%d", &nr_of_vertices);
+    printf("cate noduri are graful?");
+    scanf("%d", &nr_of_vertices);
 
     printf("cate muchii are graful?");
     scanf("%d", &nr_of_edges);
 
-           GPH *graph = create_graph(nr_of_vertices);
-           insedg(nr_of_vertices, nr_of_edges, graph);
+    GPH *graph = create_graph(nr_of_vertices);
+    insedg(nr_of_vertices, nr_of_edges, graph);
 
     printf("de unde plecam in DFS?");
     scanf("%d", &starting_vertex);
 
-            printf("parcurgere cu DFS:");
-            DFS(graph, starting_vertex);
+    printf("parcurgere cu DFS:");
+    DFS(graph, starting_vertex);
 
     wipe_visited_list(graph, nr_of_vertices);
     printf("\n");
 
-            printf("de unde plecam in BFS?");
-            scanf("%d", &starting_vertex);
+    printf("de unde plecam in BFS?");
+    scanf("%d", &starting_vertex);
 
     printf("parcurgere cu BFS:");
     BFS(graph, starting_vertex);
